@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- ************************* -->
+  <title>Firebase チャレンジ</title>
+
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="../assets/semantic/semantic.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="../assets/semantic/semantic.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+
+<span id="app">
+
+<!-- loader -->
+<div class="ui dimmer" id="dimmer">
+  <div class="ui massive text loader">
+    <h3>Loading</h3>
+  </div>
+</div>
+
+<!-- モダール - ビンゴモーダル -->
+
+<!-- ヘッダー -->
+<div class="ui inverted large borderless fixed fluid menu column" style="color: rgba(0, 0, 0, 0.87)!important;">
+  <a class="header item" id='top' href="/">FirebaseCloudStrage</a>
+  <div class="right menu">
+    <div class="ui dropdown item">
+      <div class="header"><h4>MENU</h4></div>
+      <i class="share square icon"></i>
+      <div class="menu">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui middle aligned center aligned container" style="margin-top:6rem;">
+
+<div class="ui steps">
+  <div class="step">
+    <i class="truck icon"></i>
+    <div class="content">
+      <div class="title">加工</div>
+      <div class="description">Canvasを使って画像を作成</div>
+    </div>
+  </div>
+    <div class="step">
+      <i class="payment icon"></i>
+      <div class="content">
+        <div class="title">アップロード</div>
+        <div class="description">加工した画像をアップロード</div>
+      </div>
+    </div>
+    <div class="step">
+      <i class="info icon"></i>
+      <div class="content">
+        <div class="title">SNSでシェア</div>
+        <div class="description">OGP画像としてSNSニシェアする</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="ui middle aligned center aligned grid container">
+    <div class="ui fluid segment">
+      <label id="upload" class="ui huge blue right floated button">
+        <i class="ui upload icon"></i> 
+        Firebase GO!
+      </label>
+
+      <input type="file" class="inputfile" id="embedpollfileinput""/>
+      <label for="embedpollfileinput" class="ui huge green right floated button">
+          <i class="ui upload icon"></i> 
+          Upload image
+      </label>
+    </div>
+  </div>
+
+<span>
+
+<script type="text/javascript" src="/src/js/main.js"></script>
+<script type="text/javascript" src="/src/js/firebaseKeys.js"></script>
+
+<style>
+
+.grid.container {
+  margin-top: 5em;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+</style>
+
+</html>
